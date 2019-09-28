@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func cursorButtonDidPress(_ sender: Any) {
+        Swift.print("cursorButtonDidPress")
+    }
+
+    @IBAction func textButtonDidPress(_ sender: Any) {
+        Swift.print("textButtonDidPress")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
