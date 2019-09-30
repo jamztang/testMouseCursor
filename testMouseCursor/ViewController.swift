@@ -8,47 +8,39 @@
 
 import UIKit
 
-class Proxy<T>: NSObject {
-    let target: T
-
-    init(_ target: T) {
-        self.target = target
+func fromBundle<T>(_ bundleName: String) -> T {
+    guard let path = Bundle.main.path(forResource: bundleName, ofType: "bundle") else {
+        fatalError("XXX bundle not found")
+    }
+    guard let bundle = Bundle(path: path) else {
+        fatalError("XXX bundle not found \(path)")
     }
 
-    static func fromBundle(bundle: String) -> Proxy<T> {
-        guard let path = Bundle.main.path(forResource: bundle, ofType: "bundle") else {
-            fatalError("XXX bundle not found")
-        }
-        guard let bundle = Bundle(path: path) else {
-            fatalError("XXX bundle not found \(path)")
-        }
-
-        do {
-            try bundle.loadAndReturnError()
-        } catch {
-            fatalError("XXX bundle loading failed. \(error)")
-        }
-
-        guard let principleClass = bundle.principalClass as? NSObject.Type else {
-            fatalError("XXX principleClass noClass")
-        }
-
-        let instance = principleClass.init() as! T
-        return Proxy(instance)
+    do {
+        try bundle.loadAndReturnError()
+    } catch {
+        fatalError("XXX bundle loading failed. \(error)")
     }
+
+    guard let principleClass = bundle.principalClass as? NSObject.Type else {
+        fatalError("XXX principleClass noClass")
+    }
+
+    let instance = principleClass.init() as! T
+    return instance
 }
 
 class ViewController: UIViewController {
-    private let mouse = Proxy<MouseControllerProtocol>.fromBundle(bundle: "MouseController").target
+    private let mouse: MouseControllerProtocol = fromBundle("MouseController")
 
     @IBAction func cursorButtonDidPress(_ sender: Any) {
         Swift.print("XXX mouse.changeCursor(.arrow)")
-        mouse.changeCursor(CursorArrow)
+        mouse.change(.arrow)
     }
 
     @IBAction func textButtonDidPress(_ sender: Any) {
         Swift.print("XXX mouse.changeCursor(.text)")
-        mouse.changeCursor(CursorText)
+        mouse.change(.text)
     }
 
     override func viewDidLoad() {

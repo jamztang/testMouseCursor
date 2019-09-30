@@ -8,9 +8,14 @@
 
 @import Foundation;
 
-typedef NSString * Cursor;
-static Cursor const CursorText = @"text";
-static Cursor const CursorArrow = @"arrow";
+//typedef NSString * Cursor;
+//static Cursor const CursorText = @"text";
+//static Cursor const CursorArrow = @"arrow";
+
+typedef NS_ENUM(NSUInteger, Cursor) {
+    CursorText,
+    CursorArrow,
+};
 
 @protocol MouseControllerProtocol
 
