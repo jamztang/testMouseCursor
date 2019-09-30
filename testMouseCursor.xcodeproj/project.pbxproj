@@ -3,14 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2B68BB23407FD1003207DD /* MouseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B68BA23407FD1003207DD /* MouseProtocol.swift */; };
-		1A2B68D023408756003207DD /* MouseController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAB4AE233FF5FF00568993 /* MouseController.bundle */; platformFilter = maccatalyst; };
-		1A2B68D4234087D8003207DD /* MouseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B68D3234087D8003207DD /* MouseProtocol.swift */; };
-		1A2B68D5234087E6003207DD /* MouseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B68D3234087D8003207DD /* MouseProtocol.swift */; };
 		1ACAB47A233FF53800568993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB479233FF53800568993 /* AppDelegate.swift */; };
 		1ACAB47C233FF53800568993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB47B233FF53800568993 /* SceneDelegate.swift */; };
 		1ACAB47E233FF53800568993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB47D233FF53800568993 /* ViewController.swift */; };
@@ -19,21 +15,11 @@
 		1ACAB486233FF53B00568993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAB484233FF53B00568993 /* LaunchScreen.storyboard */; };
 		1ACAB491233FF53B00568993 /* testMouseCursorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB490233FF53B00568993 /* testMouseCursorTests.swift */; };
 		1ACAB49C233FF53B00568993 /* testMouseCursorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB49B233FF53B00568993 /* testMouseCursorUITests.swift */; };
-		1ACAB4B6233FF62000568993 /* MouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB4B5233FF62000568993 /* MouseController.swift */; };
-		1ACAB4C62340796800568993 /* MouseLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACAB4C52340796800568993 /* MouseLibrary.h */; };
-		1ACAB4C82340796800568993 /* MouseLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB4C72340796800568993 /* MouseLibrary.m */; };
-		1ACAB4D8234079CF00568993 /* MouseCatalystLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB4D7234079CF00568993 /* MouseCatalystLibrary.swift */; };
-		1ACAB4E123407C0A00568993 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB4E023407C0A00568993 /* Mouse.swift */; };
+		1AF8FD9E2341CC34009768EA /* MouseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8FD9C2341CC06009768EA /* MouseController.m */; };
+		1AF8FDA32341CEDF009768EA /* MouseController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAB4AE233FF5FF00568993 /* MouseController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A2B68D1234087AE003207DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1ACAB46E233FF53800568993 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1ACAB4AD233FF5FF00568993;
-			remoteInfo = MouseController;
-		};
 		1ACAB48D233FF53B00568993 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1ACAB46E233FF53800568993 /* Project object */;
@@ -48,14 +34,21 @@
 			remoteGlobalIDString = 1ACAB475233FF53800568993;
 			remoteInfo = testMouseCursor;
 		};
+		1AF8FDA42341D0B3009768EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ACAB46E233FF53800568993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ACAB4AD233FF5FF00568993;
+			remoteInfo = MouseController;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1ACAB4D3234079CF00568993 /* CopyFiles */ = {
+		1A98CA712341A5FD009D084C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,8 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A2B68BA23407FD1003207DD /* MouseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseProtocol.swift; sourceTree = "<group>"; };
-		1A2B68D3234087D8003207DD /* MouseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseProtocol.swift; sourceTree = "<group>"; };
+		1A98CA6F2341A5D6009D084C /* libMouseLibrary.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMouseLibrary.dylib; sourceTree = "<group>"; };
 		1ACAB476233FF53800568993 /* testMouseCursor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMouseCursor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACAB479233FF53800568993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ACAB47B233FF53800568993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,15 +75,10 @@
 		1ACAB4AE233FF5FF00568993 /* MouseController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MouseController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACAB4B0233FF5FF00568993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ACAB4B4233FF62000568993 /* MouseController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MouseController-Bridging-Header.h"; sourceTree = "<group>"; };
-		1ACAB4B5233FF62000568993 /* MouseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseController.swift; sourceTree = "<group>"; };
-		1ACAB4C32340796800568993 /* libMouseLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMouseLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ACAB4C52340796800568993 /* MouseLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseLibrary.h; sourceTree = "<group>"; };
-		1ACAB4C72340796800568993 /* MouseLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseLibrary.m; sourceTree = "<group>"; };
-		1ACAB4D5234079CF00568993 /* libMouseCatalystLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMouseCatalystLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ACAB4D7234079CF00568993 /* MouseCatalystLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseCatalystLibrary.swift; sourceTree = "<group>"; };
 		1ACAB4DC23407ABC00568993 /* testMouseCursor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testMouseCursor-Bridging-Header.h"; sourceTree = "<group>"; };
-		1ACAB4DF23407C0A00568993 /* MouseLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MouseLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
-		1ACAB4E023407C0A00568993 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		1AF8FD9B2341CA4D009768EA /* MouseControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseControllerProtocol.h; sourceTree = "<group>"; };
+		1AF8FD9C2341CC06009768EA /* MouseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseController.m; sourceTree = "<group>"; };
+		1AF8FDA02341CD95009768EA /* MouseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,20 +110,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1ACAB4C12340796800568993 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1ACAB4D2234079CF00568993 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,8 +120,6 @@
 				1ACAB48F233FF53B00568993 /* testMouseCursorTests */,
 				1ACAB49A233FF53B00568993 /* testMouseCursorUITests */,
 				1ACAB4AF233FF5FF00568993 /* MouseController */,
-				1ACAB4C42340796800568993 /* MouseLibrary */,
-				1ACAB4D6234079CF00568993 /* MouseCatalystLibrary */,
 				1ACAB477233FF53800568993 /* Products */,
 				1ACAB4BA233FF7EA00568993 /* Frameworks */,
 			);
@@ -161,8 +132,6 @@
 				1ACAB48C233FF53B00568993 /* testMouseCursorTests.xctest */,
 				1ACAB497233FF53B00568993 /* testMouseCursorUITests.xctest */,
 				1ACAB4AE233FF5FF00568993 /* MouseController.bundle */,
-				1ACAB4C32340796800568993 /* libMouseLibrary.dylib */,
-				1ACAB4D5234079CF00568993 /* libMouseCatalystLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +139,7 @@
 		1ACAB478233FF53800568993 /* testMouseCursor */ = {
 			isa = PBXGroup;
 			children = (
+				1A98CA6F2341A5D6009D084C /* libMouseLibrary.dylib */,
 				1ACAB4A9233FF5C000568993 /* testMouseCursor.entitlements */,
 				1ACAB479233FF53800568993 /* AppDelegate.swift */,
 				1ACAB47B233FF53800568993 /* SceneDelegate.swift */,
@@ -205,9 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				1ACAB4B0233FF5FF00568993 /* Info.plist */,
-				1ACAB4B5233FF62000568993 /* MouseController.swift */,
+				1AF8FD9B2341CA4D009768EA /* MouseControllerProtocol.h */,
+				1AF8FDA02341CD95009768EA /* MouseController.h */,
+				1AF8FD9C2341CC06009768EA /* MouseController.m */,
 				1ACAB4B4233FF62000568993 /* MouseController-Bridging-Header.h */,
-				1A2B68D3234087D8003207DD /* MouseProtocol.swift */,
 			);
 			path = MouseController;
 			sourceTree = "<group>";
@@ -219,38 +190,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1ACAB4C42340796800568993 /* MouseLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				1ACAB4C52340796800568993 /* MouseLibrary.h */,
-				1ACAB4C72340796800568993 /* MouseLibrary.m */,
-				1ACAB4E023407C0A00568993 /* Mouse.swift */,
-				1ACAB4DF23407C0A00568993 /* MouseLibrary-Bridging-Header.h */,
-				1A2B68BA23407FD1003207DD /* MouseProtocol.swift */,
-			);
-			path = MouseLibrary;
-			sourceTree = "<group>";
-		};
-		1ACAB4D6234079CF00568993 /* MouseCatalystLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				1ACAB4D7234079CF00568993 /* MouseCatalystLibrary.swift */,
-			);
-			path = MouseCatalystLibrary;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		1ACAB4BF2340796800568993 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1ACAB4C62340796800568993 /* MouseLibrary.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1ACAB475233FF53800568993 /* testMouseCursor */ = {
@@ -260,11 +200,12 @@
 				1ACAB472233FF53800568993 /* Sources */,
 				1ACAB473233FF53800568993 /* Frameworks */,
 				1ACAB474233FF53800568993 /* Resources */,
+				1A98CA712341A5FD009D084C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1A2B68D2234087AE003207DD /* PBXTargetDependency */,
+				1AF8FDA52341D0B3009768EA /* PBXTargetDependency */,
 			);
 			name = testMouseCursor;
 			productName = testMouseCursor;
@@ -324,40 +265,6 @@
 			productReference = 1ACAB4AE233FF5FF00568993 /* MouseController.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		1ACAB4C22340796800568993 /* MouseLibrary */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1ACAB4C92340796800568993 /* Build configuration list for PBXNativeTarget "MouseLibrary" */;
-			buildPhases = (
-				1ACAB4BF2340796800568993 /* Headers */,
-				1ACAB4C02340796800568993 /* Sources */,
-				1ACAB4C12340796800568993 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MouseLibrary;
-			productName = MouseLibrary;
-			productReference = 1ACAB4C32340796800568993 /* libMouseLibrary.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		1ACAB4D4234079CF00568993 /* MouseCatalystLibrary */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1ACAB4D9234079CF00568993 /* Build configuration list for PBXNativeTarget "MouseCatalystLibrary" */;
-			buildPhases = (
-				1ACAB4D1234079CF00568993 /* Sources */,
-				1ACAB4D2234079CF00568993 /* Frameworks */,
-				1ACAB4D3234079CF00568993 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MouseCatalystLibrary;
-			productName = MouseCatalystLibrary;
-			productReference = 1ACAB4D5234079CF00568993 /* libMouseCatalystLibrary.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,13 +291,6 @@
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
 					};
-					1ACAB4C22340796800568993 = {
-						CreatedOnToolsVersion = 11.0;
-						LastSwiftMigration = 1100;
-					};
-					1ACAB4D4234079CF00568993 = {
-						CreatedOnToolsVersion = 11.0;
-					};
 				};
 			};
 			buildConfigurationList = 1ACAB471233FF53800568993 /* Build configuration list for PBXProject "testMouseCursor" */;
@@ -410,8 +310,6 @@
 				1ACAB48B233FF53B00568993 /* testMouseCursorTests */,
 				1ACAB496233FF53B00568993 /* testMouseCursorUITests */,
 				1ACAB4AD233FF5FF00568993 /* MouseController */,
-				1ACAB4C22340796800568993 /* MouseLibrary */,
-				1ACAB4D4234079CF00568993 /* MouseCatalystLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2B68D023408756003207DD /* MouseController.bundle in Resources */,
+				1AF8FDA32341CEDF009768EA /* MouseController.bundle in Resources */,
 				1ACAB486233FF53B00568993 /* LaunchScreen.storyboard in Resources */,
 				1ACAB483233FF53B00568993 /* Assets.xcassets in Resources */,
 				1ACAB481233FF53800568993 /* Main.storyboard in Resources */,
@@ -457,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACAB47E233FF53800568993 /* ViewController.swift in Sources */,
-				1A2B68D5234087E6003207DD /* MouseProtocol.swift in Sources */,
 				1ACAB47A233FF53800568993 /* AppDelegate.swift in Sources */,
 				1ACAB47C233FF53800568993 /* SceneDelegate.swift in Sources */,
 			);
@@ -483,38 +380,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACAB4B6233FF62000568993 /* MouseController.swift in Sources */,
-				1A2B68D4234087D8003207DD /* MouseProtocol.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1ACAB4C02340796800568993 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A2B68BB23407FD1003207DD /* MouseProtocol.swift in Sources */,
-				1ACAB4C82340796800568993 /* MouseLibrary.m in Sources */,
-				1ACAB4E123407C0A00568993 /* Mouse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1ACAB4D1234079CF00568993 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1ACAB4D8234079CF00568993 /* MouseCatalystLibrary.swift in Sources */,
+				1AF8FD9E2341CC34009768EA /* MouseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1A2B68D2234087AE003207DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = maccatalyst;
-			target = 1ACAB4AD233FF5FF00568993 /* MouseController */;
-			targetProxy = 1A2B68D1234087AE003207DD /* PBXContainerItemProxy */;
-		};
 		1ACAB48E233FF53B00568993 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1ACAB475233FF53800568993 /* testMouseCursor */;
@@ -524,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 1ACAB475233FF53800568993 /* testMouseCursor */;
 			targetProxy = 1ACAB498233FF53B00568993 /* PBXContainerItemProxy */;
+		};
+		1AF8FDA52341D0B3009768EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ACAB4AD233FF5FF00568993 /* MouseController */;
+			targetProxy = 1AF8FDA42341D0B3009768EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -670,10 +547,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5UAR78B6YU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testMouseCursor",
+				);
 				INFOPLIST_FILE = testMouseCursor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testMouseCursor",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMouseCursor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -694,10 +579,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5UAR78B6YU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testMouseCursor",
+				);
 				INFOPLIST_FILE = testMouseCursor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/testMouseCursor",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMouseCursor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -849,85 +742,6 @@
 			};
 			name = Release;
 		};
-		1ACAB4CA2340796800568993 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
-				DEVELOPMENT_TEAM = 5UAR78B6YU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MouseLibrary/MouseLibrary-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		1ACAB4CB2340796800568993 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
-				DEVELOPMENT_TEAM = 5UAR78B6YU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MouseLibrary/MouseLibrary-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		1ACAB4DA234079CF00568993 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5UAR78B6YU;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1ACAB4DB234079CF00568993 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5UAR78B6YU;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -972,24 +786,6 @@
 			buildConfigurations = (
 				1ACAB4B2233FF5FF00568993 /* Debug */,
 				1ACAB4B3233FF5FF00568993 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1ACAB4C92340796800568993 /* Build configuration list for PBXNativeTarget "MouseLibrary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1ACAB4CA2340796800568993 /* Debug */,
-				1ACAB4CB2340796800568993 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1ACAB4D9234079CF00568993 /* Build configuration list for PBXNativeTarget "MouseCatalystLibrary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1ACAB4DA234079CF00568993 /* Debug */,
-				1ACAB4DB234079CF00568993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

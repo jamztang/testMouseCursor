@@ -8,66 +8,52 @@
 
 import UIKit
 
+class Proxy<T>: NSObject {
+    let target: T
+
+    init(_ target: T) {
+        self.target = target
+    }
+
+    static func fromBundle(bundle: String) -> Proxy<T> {
+        guard let path = Bundle.main.path(forResource: bundle, ofType: "bundle") else {
+            fatalError("XXX bundle not found")
+        }
+        guard let bundle = Bundle(path: path) else {
+            fatalError("XXX bundle not found \(path)")
+        }
+
+        do {
+            try bundle.loadAndReturnError()
+        } catch {
+            fatalError("XXX bundle loading failed. \(error)")
+        }
+
+        guard let principleClass = bundle.principalClass as? NSObject.Type else {
+            fatalError("XXX principleClass noClass")
+        }
+
+        let instance = principleClass.init() as! T
+        return Proxy(instance)
+    }
+}
+
 class ViewController: UIViewController {
-//    private let mouse = Mouse()
-    private var mouse: MouseProtocol!
+    private let mouse = Proxy<MouseControllerProtocol>.fromBundle(bundle: "MouseController").target
 
     @IBAction func cursorButtonDidPress(_ sender: Any) {
-        Swift.print("cursorButtonDidPress")
-        mouse.changeCursor(.arrow)
-    
+        Swift.print("XXX mouse.changeCursor(.arrow)")
+        mouse.changeCursor(CursorArrow)
     }
 
     @IBAction func textButtonDidPress(_ sender: Any) {
-        Swift.print("textButtonDidPress")
-        mouse.changeCursor(.text)
+        Swift.print("XXX mouse.changeCursor(.text)")
+        mouse.changeCursor(CursorText)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        let mouseController = NSClassFromString("MouseController")
-//        print("beforeload mouseController \(mouseController)")
-//
-        print("XXX allBundle \(Bundle.allBundles)")
-
-        guard let path = Bundle.main.path(forResource: "MouseController", ofType: "bundle") else {
-            print("XXX bundle not found")
-            return
-        }
-        print("XXX path \(path)")
-        guard let bundle = Bundle(path: path) else {
-            return
-        }
-        do {
-            try bundle.loadAndReturnError()
-        } catch {
-            print("XXX bundle loading failed. \(error)")
-            return
-        }
-        print("XXX bundle \(bundle)")
-
-        guard let principleClass = bundle.principalClass as? NSObject.Type else {
-            print("XXX principleClass noClass")
-            return
-        }
-
-        print("XXX principleClass \(principleClass)")
-//        let clz : AnyClass = principleClass
-
-        let instance = principleClass.init()
-        print("XXX instance \(instance)")
-
-        guard let pro = instance as? MouseProtocol else {
-            print("XXX instancd not mouseProtocol")
-            return
-        }
-
-        mouse = pro
-        print("XXX mouse \(mouse)")
-
     }
-
-
 }
 
