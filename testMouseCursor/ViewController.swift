@@ -66,7 +66,13 @@ class ViewController: UIViewController {
     private func reloadMouse() {
         // According to https://developer.apple.com/design/human-interface-guidelines/ios/overview/mac-catalyst/
         // we know the catalyst app content is scaled by 77%, so we need to downsize the image
-        let mouseTransform: CGFloat = 0.77
+        let catalystTransform: CGFloat = 0.77
+
+        // We know macOS system has a cursor size accessibility settings
+        let accessibility = UserDefaults.standard.persistentDomain(forName: "com.apple.universalaccess")
+        let accessibilityMouseTransform = accessibility?["mouseDriverCursorSize"] as? CGFloat ?? 1
+        let mouseTransform = catalystTransform / accessibilityMouseTransform
+
         let size = CGSize(width: length, height: length).applying(CGAffineTransform.init(scaleX: mouseTransform, y: mouseTransform))
         let image = try? UIImage.draw(size: size) { (context, size, scale) in
             Swift.print("XXX mouse.changeCursor(.image) size \(size) \(scale)")
