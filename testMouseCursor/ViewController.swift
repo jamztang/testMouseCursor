@@ -32,6 +32,17 @@ func fromBundle<T>(_ bundleName: String) -> T {
 
 class ViewController: UIViewController {
     private let mouse: MouseControllerProtocol = fromBundle("MouseController")
+    @IBOutlet weak var sizeTextField: UITextField!
+    @IBOutlet weak var sizeSlider: UISlider!
+    @IBOutlet weak var sizePreview: UIView!
+    private var length: CGFloat = 30 {
+        didSet {
+            let rect = CGRect(origin: sizeTextField.frame.origin, size: CGSize(width: length, height: length))
+            sizePreview.frame = rect
+            sizePreview.center = view.center
+            sizeTextField.text = "\(length)"
+        }
+    }
 
     @IBAction func cursorButtonDidPress(_ sender: Any) {
         Swift.print("XXX mouse.changeCursor(.arrow)")
@@ -41,6 +52,30 @@ class ViewController: UIViewController {
     @IBAction func textButtonDidPress(_ sender: Any) {
         Swift.print("XXX mouse.changeCursor(.text)")
         mouse.change(.text)
+    }
+
+    @IBAction func customImageDidPress(_ sender: Any) {
+        reloadMouse()
+    }
+
+    @IBAction func sizeSliderValueDidChange(_ sender: Any) {
+        length = CGFloat(sizeSlider.value)
+        reloadMouse()
+    }
+
+    private func reloadMouse() {
+        let mouseTransform: CGFloat = 1
+        let size = CGSize(width: length, height: length).applying(CGAffineTransform.init(scaleX: mouseTransform, y: mouseTransform))
+        let image = try? UIImage.draw(size: size) { (context, size, scale) in
+            Swift.print("XXX mouse.changeCursor(.image) size \(size) \(scale)")
+
+            let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+            context.setFillColor(UIColor.green.cgColor)
+            context.fill(rect)
+        }
+        if let data = image??.pngData() {
+            mouse.setCursorImageData(data, hotSpot: CGPoint(x: size.height / 2, y: size.height / 2))
+        }
     }
 
     override func viewDidLoad() {

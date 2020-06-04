@@ -17,6 +17,7 @@
 		1ACAB49C233FF53B00568993 /* testMouseCursorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACAB49B233FF53B00568993 /* testMouseCursorUITests.swift */; };
 		1AF8FD9E2341CC34009768EA /* MouseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8FD9C2341CC06009768EA /* MouseController.m */; };
 		1AF8FDA32341CEDF009768EA /* MouseController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAB4AE233FF5FF00568993 /* MouseController.bundle */; };
+		1AFBCAC22488CB3800DE7134 /* UIImage+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFBCAC12488CB3800DE7134 /* UIImage+Draw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A98CA6F2341A5D6009D084C /* libMouseLibrary.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMouseLibrary.dylib; sourceTree = "<group>"; };
 		1ACAB476233FF53800568993 /* testMouseCursor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMouseCursor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACAB479233FF53800568993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ACAB47B233FF53800568993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		1AF8FD9B2341CA4D009768EA /* MouseControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseControllerProtocol.h; sourceTree = "<group>"; };
 		1AF8FD9C2341CC06009768EA /* MouseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseController.m; sourceTree = "<group>"; };
 		1AF8FDA02341CD95009768EA /* MouseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseController.h; sourceTree = "<group>"; };
+		1AFBCAC12488CB3800DE7134 /* UIImage+Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Draw.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,11 +140,11 @@
 		1ACAB478233FF53800568993 /* testMouseCursor */ = {
 			isa = PBXGroup;
 			children = (
-				1A98CA6F2341A5D6009D084C /* libMouseLibrary.dylib */,
 				1ACAB4A9233FF5C000568993 /* testMouseCursor.entitlements */,
 				1ACAB479233FF53800568993 /* AppDelegate.swift */,
 				1ACAB47B233FF53800568993 /* SceneDelegate.swift */,
 				1ACAB47D233FF53800568993 /* ViewController.swift */,
+				1AFBCAC12488CB3800DE7134 /* UIImage+Draw.swift */,
 				1ACAB47F233FF53800568993 /* Main.storyboard */,
 				1ACAB482233FF53B00568993 /* Assets.xcassets */,
 				1ACAB484233FF53B00568993 /* LaunchScreen.storyboard */,
@@ -357,6 +358,7 @@
 				1ACAB47E233FF53800568993 /* ViewController.swift in Sources */,
 				1ACAB47A233FF53800568993 /* AppDelegate.swift in Sources */,
 				1ACAB47C233FF53800568993 /* SceneDelegate.swift in Sources */,
+				1AFBCAC22488CB3800DE7134 /* UIImage+Draw.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

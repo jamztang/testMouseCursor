@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, Cursor) {
 @protocol MouseControllerProtocol
 
 - (void)changeCursor:(Cursor)cursor;
+- (void)setCursorImageData:(NSData *)image hotSpot:(CGPoint)point;
 
 @end
 

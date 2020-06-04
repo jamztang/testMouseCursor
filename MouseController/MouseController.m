@@ -22,4 +22,10 @@
     }
 }
 
+- (void)setCursorImageData:(NSData *)image hotSpot:(CGPoint)point {
+    NSImage *cursorImage = [[NSImage alloc] initWithData: image];
+    NSCursor *cursor = [[NSCursor alloc] initWithImage:cursorImage hotSpot:point];
+    [cursor set];
+}
+
 @end
