@@ -73,8 +73,8 @@ class ViewController: UIViewController {
         let accessibilityMouseTransform = accessibility?["mouseDriverCursorSize"] as? CGFloat ?? 1
         let mouseTransform = catalystTransform / accessibilityMouseTransform
 
-        let size = CGSize(width: length, height: length).applying(CGAffineTransform.init(scaleX: mouseTransform, y: mouseTransform))
-        let image = try? UIImage.draw(size: size) { (context, size, scale) in
+        let size = CGSize(width: length, height: length).applying(.init(scaleX: mouseTransform, y: mouseTransform))
+        let image = try? UIImage.draw(size: size, scale: accessibilityMouseTransform) { (context, size, scale) in
             Swift.print("XXX mouse.changeCursor(.image) size \(size) \(scale)")
 
             let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)

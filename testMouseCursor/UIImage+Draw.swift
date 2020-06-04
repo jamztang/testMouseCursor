@@ -36,4 +36,23 @@ extension UIImage {
         }
         return newImage
     }
+
+    static func draw(size: CGSize, scale: CGFloat, handler: @escaping ContextDrawHandler) throws -> UIImage? {
+        //        UIGraphicsBeginImageContextWithOptions(size.applying(.init(scaleX: scale, y: scale)), false, 1)
+
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        guard let context = UIGraphicsGetCurrentContext() else {
+            throw ImageError.failedToGetContext
+        }
+
+        handler(context, size, scale)
+
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            throw ImageError.failedToGetImage
+        }
+        return newImage
+    }
 }
