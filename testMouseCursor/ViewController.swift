@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sizeSliderValueDidChange(_ sender: Any) {
-        length = CGFloat(sizeSlider.value)
+        length = CGFloat(sizeSlider.value).rounded()
         reloadMouse()
     }
 
