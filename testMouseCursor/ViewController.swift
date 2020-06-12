@@ -74,11 +74,11 @@ class ViewController: UIViewController {
         let mouseTransform = catalystTransform / accessibilityMouseTransform
 
         let circlePadding: CGFloat = 9 / catalystTransform
-        var size = CGSize(width: length, height: length).applying(.init(scaleX: mouseTransform, y: mouseTransform))
+        var cursorSize = CGSize(width: length, height: length).applying(.init(scaleX: mouseTransform, y: mouseTransform))
 
         // Adding spaces for crosshair
-        size.width += circlePadding * 2
-        size.height += circlePadding * 2
+        cursorSize.width += circlePadding * 2
+        cursorSize.height += circlePadding * 2
 
         let crosshairStrokeLength: CGFloat = 4 / catalystTransform
         let crosshairStrokeWidth: CGFloat = 2 / catalystTransform
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
         let penColor = UIColor(red: 148/255, green: 226/255, blue: 252/255, alpha: 1)
         let penStroke = penColor.modified(withAdditionalHue: 0, additionalSaturation: 0, additionalBrightness: -0.4)
 
-        let image = try? UIImage.draw(size: size, scale: accessibilityMouseTransform) { (context, size, scale) in
+        let image = try? UIImage.draw(size: cursorSize, scale: accessibilityMouseTransform) { (context, size, scale) in
 
             let frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
             lPath.stroke()
         }
         if let data = image??.pngData() {
-            mouse.setCursorImageData(data, hotSpot: CGPoint(x: size.height / 2, y: size.height / 2))
+            mouse.setCursorImageData(data, hotSpot: CGPoint(x: cursorSize.height / 2, y: cursorSize.height / 2))
         }
     }
 
