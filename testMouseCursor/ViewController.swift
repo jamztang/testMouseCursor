@@ -86,6 +86,9 @@ class ViewController: UIViewController {
 
         let showCrosshair = length * catalystTransform < 7
 
+        let penColor = UIColor(red: 148/255, green: 226/255, blue: 252/255, alpha: 1)
+        let penStroke = penColor.modified(withAdditionalHue: 0, additionalSaturation: 0, additionalBrightness: -0.4)
+
         let image = try? UIImage.draw(size: size, scale: accessibilityMouseTransform) { (context, size, scale) in
 
             let frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -103,9 +106,9 @@ class ViewController: UIViewController {
 
             //// Circle Drawing
             let circlePath = UIBezierPath(ovalIn: CGRect(x: frame.minX + circlePadding, y: frame.minY + circlePadding, width: frame.width - circlePadding * 2, height: frame.height - circlePadding * 2))
-            UIColor.gray.setFill()
+            penColor.setFill()
             circlePath.fill()
-            UIColor.white.setStroke()
+            penStroke.setStroke()
             circlePath.lineWidth = 1 / scale
             circlePath.stroke()
 
@@ -174,3 +177,22 @@ class ViewController: UIViewController {
     }
 }
 
+extension UIColor {
+
+    func modified(withAdditionalHue hue: CGFloat, additionalSaturation: CGFloat, additionalBrightness: CGFloat) -> UIColor {
+
+        var currentHue: CGFloat = 0.0
+        var currentSaturation: CGFloat = 0.0
+        var currentBrigthness: CGFloat = 0.0
+        var currentAlpha: CGFloat = 0.0
+
+        if self.getHue(&currentHue, saturation: &currentSaturation, brightness: &currentBrigthness, alpha: &currentAlpha){
+            return UIColor(hue: currentHue + hue,
+                           saturation: currentSaturation + additionalSaturation,
+                           brightness: currentBrigthness + additionalBrightness,
+                           alpha: currentAlpha)
+        } else {
+            return self
+        }
+    }
+}
